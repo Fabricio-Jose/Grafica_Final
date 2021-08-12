@@ -1,0 +1,100 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+{% include 'blog/setup.html'%}
+
+
+<div class="page-wrapper">
+	<div class="container-fluid">
+
+<div class="row">
+	<div class="col-lg-6">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Imagen Original</h6>
+                </div>
+                <div class="card-body">
+                  <div style="padding: 20px;">
+                    <center>
+			{% if post.imagen %}
+			
+	    	<img src="{{ post.imagen.url}}" style="max-height: 100%; max-width: 100%">
+        	{% endif %}
+			  </center>
+                  </div>
+                </div>
+              </div>
+	</div>
+	
+	<div class="col-lg-6">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Imagen Original</h6>
+                </div>
+                <div class="card-body">
+                  <div style="padding: 20px;">
+                    <center>
+			{% if post1.imagen %}
+			
+	    	<img src="{{ post1.imagen.url}}" style="max-height: 100%; max-width: 100%">
+        	{% endif %}
+			  </center>
+                  </div>
+                </div>
+              </div>
+	</div>
+	
+</div>
+<div class="row" style="background-color:#444444">
+<div class="col-md-8">
+	<a class="btn btn-default" href="{% url 'post_save' pk=post1.pk %}">
+		<span class="btn btn-primary pull-right"> CASCADA</span></a>
+</div>
+</div>
+
+
+<div class="row">
+	<div class="col-lg-6">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Resultado</h6>
+                </div>
+                <div class="card-body">
+                  <div style="padding: 20px;">
+                    <center>
+			{% if post1.result %}
+			
+	    	<img src="{{ post1.result.url }}" style="max-height: 100%; max-width: 100%">
+        	{% endif %}
+			  </center>
+                  </div>
+                </div>
+              </div>
+	</div>
+	
+	<div class="col-lg-6">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Histograma</h6>
+                </div>
+                <div class="card-body">
+                  <div style="padding: 20px;">
+                    <center>
+			{% if post1.histogram %}
+			
+	    	<img src="{{ post1.histogram.url }}" style="max-height: 100%; max-width: 100%">
+        	{% endif %}
+			  </center>
+                  </div>
+                </div>
+              </div>
+	</div>
+	
+</div>
+
+	</div>
+</div>
+
+
+{% endblock %}

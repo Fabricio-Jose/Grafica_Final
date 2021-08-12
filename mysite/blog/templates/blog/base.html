@@ -1,0 +1,92 @@
+{% load static %}
+<html>
+    <head>
+        <title>Procesamiento de Imagenes</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <link href="{% static 'assets/node_modules/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/node_modules/perfect-scrollbar/css/perfect-scrollbar.css' %}" rel="stylesheet">
+    <!-- This page CSS -->
+    <!-- chartist CSS -->
+    <link href="{% static 'assets/node_modules/morrisjs/morris.css' %}" rel="stylesheet">
+    <!--c3 CSS -->
+    <link href="{% static 'assets/node_modules/c3-master/c3.min.css' %}" rel="stylesheet">
+        	<!-- Custom CSS -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <!-- Dashboard 1 Page CSS -->
+        <link href="{% static 'css/pages/dashboard1.css' %}" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="{% static 'css/colors/default.css' %}" id="theme" rel="stylesheet">
+    </head>
+    
+    <body class="fix-header fix-sidebar card-no-border">
+    	       
+        <div id="main-wrapper">
+				 <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="">
+                        <!-- Logo icon --><b>
+                            <img src="{% static 'assets/images/logo-icon.png' %}" alt="Home" class="dark-logo" />
+                            <!-- Light Logo icon -->
+                            <img src="{% static 'assets/images/logo-light-icon.png' %}" alt="Home" class="light-logo" />
+                        </b>
+                        <span>
+                         <!-- dark Logo text -->
+                         <img src="{% static 'assets/images/logo-text.png' %}" alt="homepage" class="dark-logo" />
+                         <!-- Light Logo text -->    
+                         <img src="{% static 'assets/images/logo-light-text.png' %}" class="light-logo" alt="homepage" /></span>
+                    </a>
+                </div>
+                
+                
+                <div class="navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)"><i class="fa fa-bars"></i></a> </li>
+                        <li class="nav-item dropdown u-pro">
+								<h1><a href="/">Procesamiento de Imagenes</a></h1>
+
+                        </li>
+                     
+                    </ul>
+                  
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-link dropdown-toggle u-pro">
+                            <a href="{% url 'post_new' %}" class="btn waves-effect waves-dark btn  pull-right hidden-sm-down">
+                             <span class="">CARGAR IMAGEN &nbsp;</span> </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+                {% block content %}
+            	{% endblock %}
+		</div>
+
+    <script src="{% static 'assets/node_modules/jquery/jquery.min.js' %}"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src=" {% static 'assets/node_modules/bootstrap/js/popper.min.js' %} "></script>
+    <script src="{% static 'assets/node_modules/bootstrap/js/bootstrap.min.js' %}"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="{% static 'js/perfect-scrollbar.jquery.min.js' %}"></script>
+    <!--Wave Effects -->
+    <script src="{% static 'js/waves.js' %}"></script>
+    <!--Menu sidebar -->
+    <script src="{% static 'js/sidebarmenu.js' %} "></script>
+    <!--Custom JavaScript -->
+    <script src="{% static 'js/custom.min.js' %}"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <!--morris JavaScript -->
+    <script src="{% static 'assets/node_modules/raphael/raphael-min.js' %}"></script>
+    <script src="{% static 'assets/node_modules/morrisjs/morris.min.js' %}"></script>
+    <!--c3 JavaScript -->
+    <script src="{% static 'assets/node_modules/d3/d3.min.js' %}"></script>
+    <script src="{% static 'assets/node_modules/c3-master/c3.min.js' %}"></script>
+    <!-- Chart JS -->
+    <script src="{% static 'js/dashboard1.js' %}"></script>
+    </body>
+</html>
